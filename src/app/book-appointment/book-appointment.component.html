@@ -1,0 +1,39 @@
+<html>
+  <h1 class="de"><b>Book Appointment</b></h1>
+  <div>
+    <table class="ef">
+      <tr>
+          <td>Patient Name:<input type="text"  name="patientname" [(ngModel)]="model.patientname" /></td>
+         <!-- <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+          <div *ngIf="userName.errors.required">username Name is required</div>
+           </div> -->
+      </tr><br> <br>
+      <tr>
+           <td>Patient Id:<input type="pid"  name="pid" [(ngModel)]="model.pid" /></td>
+         <!-- <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+          <div *ngIf="userName.errors.required">username Name is required</div>
+      </div> -->
+      </tr><br><br>
+      <tr>
+        <td>Patient EmailId:<input type="email"  name="email" [(ngModel)]="model.email" /></td>
+          <!-- <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+              <div *ngIf="userName.errors.required">username Name is required</div>
+          </div> -->
+          </tr><br><br>
+          <tr>
+              <td>Doctor Id:<input type="hid"  name="" [(ngModel)]="model.hid" /></td>
+                <!-- <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+                    <div *ngIf="userName.errors.required">username Name is required</div>
+                </div> -->
+                </tr><br><br>
+      <tr>
+      <td>Day: <input type="date" name="day"></td></tr><br><br>
+      <tr>
+        <td>Message:<textarea rows="4" cols="20">
+        </textarea></td></tr><br><br>
+     <tr> <td> <button  (click)="doSubmit()" style="color:red;background-color:blue;width:100px;height:40px;">SUBMIT</button></td></tr>
+ </table>
+  </div>
+  </html>
+
+  

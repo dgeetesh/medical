@@ -1,0 +1,14 @@
+
+{
+	"id": 2,
+	"name": "Aryan Hospital & Research Center",
+	"email": "aryanhospital@gmail.com",
+	"phone": "9152831762",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "2298 Sector D, Ring Road, Sudama Nagar, Indore, Opp.Gopur Police Chowki Service Lane",
+	"pincode": "452009",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

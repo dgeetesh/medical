@@ -1,0 +1,14 @@
+
+{
+	"id": 10,
+	"name": "Sahaj Hospital Pvt Ltd",
+	"email": "sahajhpvtltd@gmail.com",
+	"phone": "9874563210",
+	"city": "South Tukoganj, Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "15/2 South Tukoganj, Near Manas Bhavan Behind Hotel Surya, Indore",
+	"pincode": "452001",
+	"time": "24 hours",
+	"openday":"Mon-Sat"
+}

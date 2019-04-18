@@ -1,0 +1,14 @@
+
+{
+	"id": 4,
+	"name": "Gurjar Hospital& Endosocopy",
+	"email": "gurjarhe@gmail.com",
+	"phone": "987654321",
+	"city": "Bhanwarkua Square, Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "2-3, Scheme #44, Bhanwarkua Square ,A.B. Road, Indore",
+	"pincode": "452009",
+	"time": "24 hours",
+	"openday":"Mon-Sat"
+}

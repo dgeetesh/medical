@@ -1,0 +1,45 @@
+html { 
+    background: url(../../assets/images/hospital.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .wer
+  {
+   background-color:white; 
+   color:white;
+   height: 30px;
+  text-align: left;
+  
+  }
+  .wer ul li{
+    display: inline;
+    margin-left: 80px;
+    text-align: center;
+  }
+  .blue{
+    margin-top: 10%;
+    color:blue;
+    text-align: center;
+    border-color:  rgb(201, 21, 21);
+  }
+  .qwe{
+    margin-top: 8%;
+    color:red;
+    margin-left: -10%;
+    text-align: center;
+    size:20px;
+    }
+   .qaz{
+    margin-top: -3.5%;
+    margin-left: 5%;
+    color:white;
+    text-align: center;
+    size:40px;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    

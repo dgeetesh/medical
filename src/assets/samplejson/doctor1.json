@@ -1,0 +1,13 @@
+{
+	"id": 1,
+	"name": "Apple Hospital",
+	"email": "applehospital@gmail.com",
+	"phone": "9826398660",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "5/1, Bhawar Kuan Main Road, Bhawar Kuan, Indore , Transport Nagar ",
+	"pincode": "452001",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

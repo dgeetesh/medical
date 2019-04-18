@@ -1,0 +1,28 @@
+
+<router-outlet><!--The content below is only a placeholder and can be replaced.-->
+    <head><link href="//netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" /></head>
+    <img  class="logo" src="../../assets/images/unnamed.png"  height="100px" weight="100px" >   
+    <div class="navbar">
+            
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/home']">Booking</a></li>
+            <li><a [routerLink]="['/medicines']">Medicines</a></li>
+            <li><a [routerLink]="['/diseases']">Diseases</a></li>
+            <li><a [routerLink]="['/instruction']">Instruction</a></li>
+           <li><a [routerLink]="['/article']">Article</a></li>
+           <li><a [routerLink]="['/aboutus']">About Us</a></li>
+           <li><a [routerLink]="['/startpage']">Register</a></li>
+           <li><a [routerLink]="['/userlogin']">Login</a></li>
+           <li><a [routerLink]="['/home']">Logout</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">button 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div> 
+          </div>    
+ </router-outlet>

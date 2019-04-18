@@ -1,0 +1,78 @@
+[{
+	     "id": 1,
+       "name": "Apple Hospital",
+       "email": "applehospital@gmail.com",
+       "phone": "9826398660"
+	},
+	{
+		"id": 2,
+		"name": "Aryan Hospital & Research Center",
+		"email": "aryanhospital@gmail.com",
+		"phone": "9152831762"
+		
+	},
+	{
+		"id": 3,
+		"name": "CHL Hospital",
+		"email": "chlhospital@gmail.com",
+		"phone": "7312549095"
+		
+	},
+	{
+		"id": 4,
+		"name": "Gurjar Hospital& Endosocopy",
+		"email": "gurjarhe@gmail.com",
+		"phone": "9876543201"
+	},
+	{
+		"id": 5,
+		"name": "Life Care Hospital",
+		"email": "lifecare@gmail.com",
+		"phone": "9754088888"
+	},
+	{
+		"id": 6,
+		"name": "Macretina hospitals",
+		"email": "macretinah@gmail.com",
+		"phone": "6809009811"
+	},{
+			"id": 7,
+			"name": "Medicare hospital and Research",
+			"email": "medicarehrgmail.com",
+			"phone": "9156789908"},
+			{
+				"id": 8,
+				"name": "Mediplus Hospitals and Research",
+				"email": "mediplushrgmail.com",
+				"phone": "6135467888"
+				
+			},
+			
+			{
+				"id": 9,
+				"name": "Nihar Netralaya",
+				"email": "niharnetralaya@gmail.com",
+				"phone": "9152350880"
+			},
+	
+			{
+				"id": 10,
+				"name": "Sahaj Hospital Pvt Ltd",
+				"email": "sahajhpvtltd@gmail.com",
+				"phone": "9874563210"
+			},	
+	{
+	    "id": 11,
+	  "name": "Shakuntala Devi Hospital And Research Centre",
+	 "email": "shakuntaladhrc@gmail.com",
+	 "phone": "6809009811"
+   },
+     	{
+			"id": 12,
+			"name": "Sunrise Hospital",
+			"email": "sunrise@gmail.com",
+			"phone": "9152501617"
+		}
+			
+		]
+

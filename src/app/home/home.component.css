@@ -1,0 +1,121 @@
+*{
+	margin: 0px;
+}
+
+.textform11{
+	font-size: 20px;
+	font-family: sans-serif;
+	color:blue;
+	margin-top: 50px;
+}
+.hrclass{
+	margin-top: 50px;
+}
+.f{
+	border-bottom: 1px solid red;
+	border-top: 1px solid red;
+	padding-bottom: 2px;
+	padding-top: 2px;
+
+}
+.nav{
+height: 10px;
+text-align: left;
+
+}
+
+.j{
+	border: 2px solid blue;
+	width: 270px;
+	margin-top: 1px;
+	margin-left: 15px;
+	font-size:15px;
+	height: 60px;
+	padding-left: 50px;
+	font-family: sans-serif;
+}
+.g{
+	color: lightblue;
+	font-size: 28px;
+ font-family: sans-serif;
+}
+.i{
+	color: red;
+	font-size: 28px;
+	font-family: sans-serif;
+}
+.k{
+	color: red;
+	font-size: 30px;
+	font-family: sans-serif;
+}
+.h{
+	color: palevioletred;
+	font-size: 28px;
+ font-family: sans-serif;
+ margin-top: -20px;
+}
+
+.c{
+	border-bottom: 1px solid red;
+	border-top: 1px solid red;
+	padding-bottom: 2px;
+    padding-top: 2px;
+}
+* {box-sizing: border-box;}
+
+.bc {
+  margin: 100;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.topnav {
+  overflow: hidden;
+  
+   text-align: right;
+   margin-top: 10px;
+  height:30px;
+}
+
+.topnav ul li {
+	display: inline;
+}
+.topnav a {
+  float: center;
+color:blue;
+  text-align: right;
+  padding: 22px 63px;
+ font-size: 15px;
+
+}
+
+.topnav a:hover {
+  background-color:lightblue;
+  color:blue ;
+  
+}
+
+
+.ghi{
+  width:100%;
+  }
+.ijk{
+  background-color:lightblue;
+  border-bottom-color: lightblue;
+  border-block-start-color: lightblue;
+  color:black;
+}
+.klm{
+  background-color:white;
+  font-size: 18px;
+  color:red;
+
+}
+.pink{
+	margin-top: -60%;
+	color:red;
+	text-align: center;
+	border-color:  rgb(201, 21, 21);
+
+}

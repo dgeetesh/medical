@@ -1,0 +1,14 @@
+
+{
+	"id": 7,
+	"name": "Medicare hospital and Research",
+	"email": "medicarehrgmail.com",
+	"phone": "9156789908",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "4/5, Old Palasia, Ravindra Nagar, Manorama Ganj,Indore",
+	"pincode": "452001",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

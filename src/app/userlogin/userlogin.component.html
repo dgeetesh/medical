@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      
+       <a  mat-button  routerLink="/userregister">Register</a>
+     <a  mat-button  routerLink="/userlogin">Login</a>
+        </mat-toolbar-row>
+ </mat-toolbar>
+ <mat-toolbar>
+   <span> LOGIN</span>
+ </mat-toolbar>
+ <mat-card class="my-card">
+    <mat-card-content>
+       <form class="my-form" (ngSubmit)="onSubmit()" #f="ngForm" >
+          <mat-form-field class="full-width">
+             <mat-label>UserName</mat-label>
+             <input  matInput  placeholder="username" name="username"  [(ngModel)]="model.username"> 
+          </mat-form-field>
+          <mat-form-field class="full-width">
+             <mat-label>Password</mat-label>
+             <input  matInput  placeholder="Password" name="password" [(ngModel)]="model.password">
+          </mat-form-field>
+          <mat-card-actions>
+            <button mat-raised-button (click)="onSubmit()" color="primary">LOGIN</button>
+         </mat-card-actions>
+       </form>
+    </mat-card-content>
+ </mat-card>

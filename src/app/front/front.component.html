@@ -1,0 +1,430 @@
+<html>
+        <head><link href="//netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" /></head>
+        
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+   <div class="topnav">
+    <ul>
+    <li><a [routerLink]="['/home']">HOME</a></li>
+    <li> <a [routerLink]="['/doctors']">HOSPITALS</a></li>
+    <li><a [routerLink]="['/more']">LOGOUT</a></li>
+    </ul>
+    </div>
+   <body>
+       <fieldset> 
+                <br>
+      <table style="width: 100%">
+         <tr>
+            <td>
+               Location: 
+               <select  class="cd" name="location" (change)="getDoctorsList($event.target.value)">
+                  <option value="">Select Location</option>
+                  <option value="{{location}}" *ngFor="let location of locationList;" >{{location}}</option>
+               </select>
+            </td>
+           <td>
+            Types:  
+            <select class="cd"name="types" (change)="getTypesList($event.target.value)">
+            <option value="">Select Types</option>
+            <option value="{{types}}"  *ngFor="let types of typesList;">{{types}}</option>
+            <option [ngValue]="types" *ngFor="let doctor of selectedTypesDoctor;let i=index;">{{doctor.spacialist}}</option>
+            </select>
+         </td>
+         <td>
+                Doctors:  
+                <select class="cd" [ngModel]="selectedDeviceObj" (ngModelChange)="onChangeObj($event)">
+                   <option value="">Select Doctors</option>
+                   <option [ngValue]="doctor" *ngFor="let doctor of selectedDoctos;let i=index;">{{doctor.name}}</option>
+                   <!-- <option [ngValue]="doctor" *ngFor="let doctor of selectedTypesDoctors;let i=index;">{{types}}</option> -->
+                </select>
+             </td>
+         </tr>
+      </table>
+      <br>
+
+      <div *ngFor="let doctor of selectedDoctos ">
+            <div  class="span8" *ngIf="selectedDoctos && selectedDoctos.length > 0">
+                    <img src="{{doctor.doctorImage}}">
+                <h3><b> {{doctor.name}}</b></h3>
+                <h6>id:  {{doctor.id}}</h6>
+                <h6>Location:  {{doctor.Location}}</h6>
+                <h6>Adress:  {{doctor.Adress}}</h6>
+                <h6>specilist:  {{doctor.specilist}}</h6>
+                <h6>phon:  {{doctor.phon}}</h6>
+                <h6><a href="#">More... </a></h6>
+                
+                <button (click)="onClickMe()">Book Appointment!</button>
+                
+            </div>
+           <br><br>
+           </div>  
+           <div class="span8" *ngIf="selectedDoctos && selectedDoctos.length < 1">
+                No Doctors found for that filters !!
+            </div>
+
+      <!-- <div  *ngFor="let doctor of selectedLocationDoctors">   -->
+        
+    
+      <!-- </div> -->
+      <!-- <ng-template [ngIf]="isDone" [ngIfElse]="notShow">
+         <div class="container-fluid well span6">
+          <div class="row-fluid">
+                <div class="span2" >
+                <img src="../../assets/images/D2.jpg">
+                </div>
+                
+                <div class="span8">
+                    <h3><b> Rajesh sharma</b></h3>
+                    <h6>id:  1</h6>
+                    <h6>Location:  RajendraNagar</h6>
+                    <h6>Adress:  102 rajendranagar indore  42001</h6>
+                    <h6>specilist:  Dental</h6>
+                    <h6>phon:  3903879023</h6>
+                    <h6><a href="#">More... </a></h6>
+                </div>
+                 <div class="span2">
+                    <div class="btn-group">
+                        <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                            Action 
+                            <span class="icon-cog icon-white"></span><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                            <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+         </div>
+         </div><br>
+         <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Deepak manashwari</b></h3>
+                      <h6>id:  3</h6>
+                      <h6>Location:  Anpurna Road</h6>
+                      <h6>Adress:  10 Anourana Road indore  42003</h6>
+                      <h6>specilist:  Cardiologist</h6>
+                      <h6>phon: 67594297984 </h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Dr sachin kothi</b></h3>
+                      <h6>id:  4</h6>
+                      <h6>Location:  rajwada</h6>
+                      <h6>Adress:  108 Rajwada indore  42001</h6>
+                      <h6>specilist:  Allergist</h6>
+                      <h6>phon: 587893939 </h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Dr Rajesh Muley</b></h3>
+                      <h6>id:  5</h6>
+                      <h6>Location:  VijayNagar</h6>
+                      <h6>Adress:  304 VijayNagar indore  42003</h6>
+                      <h6>specilist:  Anesthesiologist</h6>
+                      <h6>phon:  784927899</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b>Praveen Agrwal</b></h3>
+                      <h6>id:  6</h6>
+                      <h6>Location:  Bhawarkua</h6>
+                      <h6>Adress:  304  Bhawarkau indore  42003</h6>
+                      <h6>specilist:  Adolescent medicine spacialist</h6>
+                      <h6>phon:  784927899</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Anubha Gangrade</b></h3>
+                      <h6>id:  7</h6>
+                      <h6>Location:  Rau</h6>
+                      <h6>Adress:  304 rau indore  42003</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  789927899</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Rajesh sharma</b></h3>
+                      <h6>id:  1</h6>
+                      <h6>Location:  RajendraNagar</h6>
+                      <h6>Adress:  102 rajendranagar indore  42001</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  3903879023</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Rajesh sharma</b></h3>
+                      <h6>id:  1</h6>
+                      <h6>Location:  RajendraNagar</h6>
+                      <h6>Adress:  102 rajendranagar indore  42001</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  3903879023</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Rajesh sharma</b></h3>
+                      <h6>id:  1</h6>
+                      <h6>Location:  RajendraNagar</h6>
+                      <h6>Adress:  102 rajendranagar indore  42001</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  3903879023</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Rajesh sharma</b></h3>
+                      <h6>id:  1</h6>
+                      <h6>Location:  RajendraNagar</h6>
+                      <h6>Adress:  102 rajendranagar indore  42001</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  3903879023</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Rajesh sharma</b></h3>
+                      <h6>id:  1</h6>
+                      <h6>Location:  RajendraNagar</h6>
+                      <h6>Adress:  102 rajendranagar indore  42001</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  3903879023</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br> <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+            <div class="row-fluid">
+                  <div class="span2" >
+                  <img src="../../assets/images/D2.jpg">
+                  </div>
+                  <div class="span8">
+                      <h3><b> Rajesh sharma</b></h3>
+                      <h6>id:  1</h6>
+                      <h6>Location:  RajendraNagar</h6>
+                      <h6>Adress:  102 rajendranagar indore  42001</h6>
+                      <h6>specilist:  Dental</h6>
+                      <h6>phon:  3903879023</h6>
+                      <h6><a href="#">More... </a></h6>
+                  </div>
+                   <div class="span2">
+                      <div class="btn-group">
+                          <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                              Action 
+                              <span class="icon-cog icon-white"></span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                              <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+          </div>
+          </div><br>
+         <div class="container-fluid well span6" style="background-color:lightblue;padding-top: 50px">
+          <div class="row-fluid">
+                <div class="span2">
+                <img src="../../assets/images/D2.jpg">
+                </div>
+               <div class="span8">
+                    <h3><b>Dr Rakesh Shivhare</b></h3>
+                    <h6>id:  2</h6>
+                    <h6>Location:  Palasia</h6>
+                    <h6>Adress:  201 palasia indore 42002</h6>
+                    <h6>specilist:  Addiction psychiatrist</h6>
+                    <h6>phon:  72588942294</h6>
+                    <h6><a href="#">More... </a></h6>
+                </div>
+                 <div class="span2">
+                    <div class="btn-group">
+                        <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                            Action 
+                            <span class="icon-cog icon-white"></span><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="icon-wrench"></span> Modify</a></li>
+                            <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+         </div>
+         </div>
+         </ng-template> -->
+        </fieldset>
+        
+   </body>
+</html>

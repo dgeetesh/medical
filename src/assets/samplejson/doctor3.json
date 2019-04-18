@@ -1,0 +1,14 @@
+
+{
+	"id": 3,
+	"name": "CHL Hospital",
+	"email": "chlhospital@gmail.com",
+	"phone": "7312549095",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "A B Road, Indore - 452001, Near Lig Square, Opposite Anoop Nagar",
+	"pincode": "452001",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

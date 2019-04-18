@@ -1,0 +1,14 @@
+
+{
+	"id": 12,
+	"name": "Sunrise Hospital",
+	"email": "sunrise@gmail.com",
+	"phone": "9152501617",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "54, Panchwati Talawal Chanda, A.B. Road, Talawali Chanda, Indore , Near Jcb Showroom",
+	"pincode": "453771",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

@@ -1,0 +1,14 @@
+
+{
+	"id": 6,
+	"name": "Macretina hospitals",
+	"email": "macretinah@gmail.com",
+	"phone": "6809009811",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "Shekhar central, 212, Agra Bombay Rd, Manorama Ganj, Indore",
+	"pincode": "452001",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

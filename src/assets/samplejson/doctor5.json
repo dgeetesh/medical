@@ -1,0 +1,14 @@
+
+{
+	"id": 5,
+	"name": "Life Care Hospital",
+	"email": "lifecare@gmail.com",
+	"phone": "9754088888",
+	"city": "Indore",
+	"state": "M.p.",
+	"country": "India",
+	"address": "Plot No 2, Scheme No 78, A B Road, Vijay Nagar, Indore, Near Pollution Control Board",
+	"pincode": "452010",
+	"availablity_hours": "24 hours",
+	"openday":"Mon-Sat"
+}

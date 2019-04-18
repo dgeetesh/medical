@@ -1,0 +1,20 @@
+<div class="card" *ngIf="doctorDetails">
+  <b><div class="card-header" style="color:blue;font-size:30px;text-align: center">
+    Hospitals Details
+  </div></b>
+  <div class="card-body">
+   <h3 class="minu">{{doctorDetails.name}}</h3>
+    <p class="card-text">Name : {{doctorDetails.name}}</p>
+    <p class="card-text">Email : {{doctorDetails.email}}</p>
+    <p class="card-text">Phone : {{doctorDetails.phone}}</p>
+    <p class="card-text">City : {{doctorDetails.city}}</p>
+    <p class="card-text">State : {{doctorDetails.state}}</p>
+    <p class="card-text">Country : {{doctorDetails.country}}</p>
+    <p class="card-text"> address: {{doctorDetails.address}}</p>
+    <p class="card-text">pincode: {{doctorDetails.pincode}}</p>
+    <p class="card-text">availablity hours: {{doctorDetails.availablity_hours}}</p>
+    <p class="card-text"> openday: {{doctorDetails.openday}}</p>
+      <button class="abc" (click)=goToDoctorPage()>GoBack</button>
+      <button  [routerLink]="['/BookAppointment']" class="cde" >Booking</button>
+  </div>
+</div>

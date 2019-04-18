@@ -1,0 +1,29 @@
+.minu{
+    color:purple;
+    text-align: center;
+}
+.card-text{
+    color:red;
+    text-align: center;
+    background-color:white;
+}
+.abc{
+     
+    margin-left:auto;
+    margin-right:45%; 
+    display:block;
+    margin-top:5%;
+    margin-bottom:5%;
+    color:lightblue;
+    background-color:blue;
+    
+}
+.cde{
+    margin-left:42%;
+    margin-right:auto; 
+    display:block;
+    margin-top:-7.5%;
+    margin-bottom:0%;
+    color:white;
+    background-color:blue;
+}

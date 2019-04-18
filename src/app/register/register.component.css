@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("../../assets/images/hospital.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .nav{
+    height: 50px;
+    padding-top: 25px;
+    background-color:white; 
+    }
+    .nav ul li{
+      display: inline;
+      margin-right: 50px;
+      
+    }
+    .nav ul li a{
+      text-decoration: none;
+      color: black;
+        font-family: sans-serif;
+        text-align: right;
+    }
+    .nav ul li a:hover{
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+
+ .jinu {
+  color: black;
+  padding: px 25px;
+  text-decoration: none;
+  display: block;
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.jha li{
+  display: inline;
+  text-align: center;
+  color:black;
+
+}
+
+ 

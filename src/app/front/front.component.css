@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+    background-color:lightblue;
+    widows: 1500px;
+    height:1500px;
+    font-size: 20px;
+    color:red;
+  text-align: center;
+  padding-top: -300px;
+  font-family: 'Open Sans',sans-serif;
+}
+.g{
+	color: lightskyblue;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.i{
+	color:blue;
+	font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.j{
+	border: 2px solid blue;
+	width: 270px;
+	margin-top: 5px;
+	margin-left:15px;
+	font-size:15px;
+	height: 60px;
+  padding-left:50px;
+  font-family: sans-serif;
+}
+    .h{
+      width: 270px;
+      margin-top: -1px;
+      margin-left: -15px;
+      font-size:20px;
+      height: 60px;
+      padding-left: 10px;
+      font-family: sans-serif;
+      color:palevioletred;
+    }
+    
+    select{
+      color:blueviolet;
+      background-color:white;  
+    }
+fieldset { border:3px solid white }
+
+.spacer {
+  flex: 1 1 auto;
+}
+*{
+  margin: 0px;
+}
+
+.textform11{
+  font-size: 20px;
+  font-family: sans-serif;
+  color:blue;
+  margin-top: 50px;
+}
+.hrclass{
+  margin-top: 50px;
+}
+.f{
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  padding-bottom: 2px;
+  padding-top: 2px;
+
+}
+
+
+.j{
+  border: 2px solid blue;
+  width: 270px;
+  margin-top: 5px;
+  margin-left: 15px;
+  font-size:15px;
+  height: 60px;
+  padding-left: 50px;
+  font-family: sans-serif;
+}
+.g{
+  color: lightblue;
+  font-size: 28px;
+ font-family: sans-serif;
+}
+.i{
+  color: red;
+  font-size: 28px;
+  font-family: sans-serif;
+}
+.k{
+  color: red;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.h{
+  color: palevioletred;
+  font-size: 28px;
+ font-family: sans-serif;
+ margin-top: -15px;
+}
+
+.c{
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+  padding-bottom: 2px;
+    padding-top: 2px;
+}
+* {box-sizing: border-box;}
+
+.bc {
+  margin: 100;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  font-family: sans-serif;
+   text-align: right;
+   margin-top: 1px;
+  height:30px;
+}
+.topnav ul li {
+	display: inline;
+}
+.topnav a {
+  float: center;
+color:blue;
+  text-align: right;
+  padding: 22px 63px;
+ font-size: 15px;
+
+}
+
+.topnav a:hover {
+  background-color:lightblue;
+  color:blue ;
+  
+}
+
